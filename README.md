@@ -1,4 +1,4 @@
-# FinSet Dashboard
+# Apex-Dashboard
 
 FinSet is a personal finance dashboard UI built with React, Vite, and Tailwind CSS. The goal is to recreate a polished finance dashboard experience with sections for balances, income, expenses, savings, budgets, transactions, and financial goals.
 
