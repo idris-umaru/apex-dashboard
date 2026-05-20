@@ -1,12 +1,7 @@
-import React from 'react'
-import Header from './components/layouts/Header'
+import DashboardLayout from './components/layout/DashboardLayout'
 
 const App = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  )
+  return <DashboardLayout />
 }
 
 export default App
