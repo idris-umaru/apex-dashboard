@@ -1,6 +1,6 @@
-# Apex-Dashboard
+# apex-dashboard
 
-FinSet is a personal finance dashboard UI built with React, Vite, and Tailwind CSS. The goal is to recreate a polished finance dashboard experience with sections for balances, income, expenses, savings, budgets, transactions, and financial goals.
+apex-dashboard is a personal finance dashboard UI built with React, Vite, and Tailwind CSS. The goal is to recreate a polished finance dashboard experience with sections for balances, income, expenses, savings, budgets, transactions, and financial goals.
 
 ## Tech Stack
 
@@ -12,14 +12,14 @@ FinSet is a personal finance dashboard UI built with React, Vite, and Tailwind C
 ## Getting Started
 
 ```bash
-cd finest-dashboard
+cd apex-dashboard
 npm install
 npm run dev
 ```
 
 ## Available Scripts
 
-Run these from the `finest-dashboard` folder:
+Run these from the `apex-dashboard` folder:
 
 ```bash
 npm run dev
