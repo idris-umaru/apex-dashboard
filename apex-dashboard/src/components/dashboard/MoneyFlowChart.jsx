@@ -1,11 +1,11 @@
 import Card from '../common/Card'
 import { moneyFlow } from '../../data/mockData'
 
-const MoneyFlowChart = () => {
+const MoneyFlowChart = ({ dark }) => {
   const maxValue = Math.max(...moneyFlow.map((item) => Math.max(item.income, item.expense)))
 
   return (
-    <Card title="Money Flow">
+    <Card dark={dark} title="Money Flow">
       <div className="flex h-64 items-end gap-4">
         {moneyFlow.map((item) => (
           <div className="flex flex-1 flex-col items-center gap-2" key={item.month}>
@@ -21,7 +21,9 @@ const MoneyFlowChart = () => {
                 title={`Expense ${item.expense}`}
               />
             </div>
-            <span className="text-xs font-medium text-slate-500">{item.month}</span>
+            <span className={dark ? 'text-xs font-medium text-slate-400' : 'text-xs font-medium text-slate-500'}>
+              {item.month}
+            </span>
           </div>
         ))}
       </div>

@@ -1,8 +1,14 @@
 const navItems = ['Overview', 'Transactions', 'Budgets', 'Goals', 'Reports']
 
-const Sidebar = () => {
+const Sidebar = ({ dark }) => {
   return (
-    <aside className="hidden min-h-screen w-64 border-r border-slate-200 bg-slate-950 px-4 py-6 text-white lg:block">
+    <aside
+      className={
+        dark
+          ? 'hidden min-h-screen w-64 border-r border-slate-800 bg-slate-950 px-4 py-6 text-white lg:block'
+          : 'hidden min-h-screen w-64 border-r border-slate-200 bg-slate-950 px-4 py-6 text-white lg:block'
+      }
+    >
       <div className="mb-8 px-2">
         <h2 className="text-xl font-semibold">apex-dashboard</h2>
         <p className="text-sm text-slate-400">Personal finance</p>
