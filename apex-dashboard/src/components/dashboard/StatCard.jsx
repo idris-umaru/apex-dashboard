@@ -1,3 +1,5 @@
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
+
 const StatCard = ({ dark, label, value, change }) => {
   const isPositive = change?.startsWith('+')
 
@@ -15,7 +17,14 @@ const StatCard = ({ dark, label, value, change }) => {
           {value}
         </strong>
         {change ? (
-          <span className={isPositive ? 'text-sm font-medium text-emerald-600' : 'text-sm font-medium text-rose-600'}>
+          <span
+            className={
+              isPositive
+                ? 'inline-flex items-center gap-1 text-sm font-medium text-emerald-600'
+                : 'inline-flex items-center gap-1 text-sm font-medium text-rose-600'
+            }
+          >
+            {isPositive ? <ArrowUpRight className="h-4 w-4" /> : <ArrowDownRight className="h-4 w-4" />}
             {change}
           </span>
         ) : null}

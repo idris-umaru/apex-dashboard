@@ -1,4 +1,12 @@
-const navItems = ['Overview', 'Transactions', 'Budgets', 'Goals', 'Reports']
+import { BarChart3, Flag, LayoutDashboard, ReceiptText, WalletCards } from 'lucide-react'
+
+export const navItems = [
+  { icon: LayoutDashboard, label: 'Overview' },
+  { icon: ReceiptText, label: 'Transactions' },
+  { icon: WalletCards, label: 'Budgets' },
+  { icon: Flag, label: 'Goals' },
+  { icon: BarChart3, label: 'Reports' },
+]
 
 const Sidebar = ({ dark }) => {
   return (
@@ -14,13 +22,14 @@ const Sidebar = ({ dark }) => {
         <p className="text-sm text-slate-400">Personal finance</p>
       </div>
       <nav className="space-y-1">
-        {navItems.map((item) => (
+        {navItems.map(({ icon: Icon, label }) => (
           <a
-            className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white"
+            className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white"
             href="#"
-            key={item}
+            key={label}
           >
-            {item}
+            <Icon className="h-4 w-4" />
+            {label}
           </a>
         ))}
       </nav>
