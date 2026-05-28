@@ -1,8 +1,8 @@
-import { Menu, Moon, Plus, Search, Sun, X } from 'lucide-react'
+import { LogOut, Menu, Moon, Plus, Search, Sun, X } from 'lucide-react'
 import { useState } from 'react'
-import { navItems } from './Sidebar'
+import { navItems } from '../../data/navigation'
 
-const Header = ({ dark, setDarkMood }) => {
+const Header = ({ dark, onLogout, setDarkMood }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -104,6 +104,18 @@ const Header = ({ dark, setDarkMood }) => {
         >
           <Plus className="h-4 w-4" />
           Add Transaction
+        </button>
+        <button
+          aria-label="Sign out"
+          className={
+            dark
+              ? 'grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-slate-700 bg-slate-950 text-slate-200 transition hover:bg-slate-800 hover:text-white'
+              : 'grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-slate-200 bg-white text-slate-600 transition hover:bg-slate-50 hover:text-slate-950'
+          }
+          onClick={onLogout}
+          type="button"
+        >
+          <LogOut className="h-4 w-4" />
         </button>
       </div>
     </header>
